@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import DataTable from "../DataTable/DataTable";
+import Nav from "../Nav/Nav";
 import API from "../../utils/API";
-import DataContext from "../../utils/DataContext";
+import "./DataArea.css";
+import DataContext from "../../utils/DataContext"
 
 const DataArea = () => {
   const [developerState, setDeveloperState] = useState({
@@ -83,7 +86,17 @@ const DataArea = () => {
   }, []);
 
   return (
-    
+    <DataContext.Provider
+      value={{ developerState, handleSearchChange, handleSort }}
+    >
+      <Nav />
+      <div className="data-area">
+        {developerState.filteredUsers.length > 0
+          ? <DataTable />
+          : <div></div>
+        }
+      </div>
+    </DataContext.Provider>
   );
 }
 
