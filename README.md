@@ -6,6 +6,6 @@ This application uses React to create a directory containing information of dumm
 
 ![Application landing page](/employeeDirectorySS.JPG)
 
-[Employee Directory](https://slothings.github.io/employee-directory/) is hosted on Heroku
+[Employee Directory](https://slothings.github.io/employee-directory/) is hosted on Github Pages
 
 This application was authored by [Seth Martineau](https://github.com/slothings)
